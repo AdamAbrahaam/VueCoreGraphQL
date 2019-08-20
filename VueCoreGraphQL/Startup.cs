@@ -77,7 +77,7 @@ namespace VueCoreGraphQL
             app.UseCors(builder =>
                 builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
-            app.UseGraphQL<CarvedRockSchema>();     // In argument we can specify the endpoint URI, /GraphQl default
+            app.UseGraphQL<CarvedRockSchema>();     // In argument we can specify the endpoint URI, /GraphQl default 
 
             // Sets up the default GraphQL playground at /ui/Playground
             // Project properties -> Debug -> Launch browser -> ui/Playground (starts the browser with the playground)
