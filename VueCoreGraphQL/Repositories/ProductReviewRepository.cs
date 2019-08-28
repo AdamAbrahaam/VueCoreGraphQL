@@ -31,5 +31,12 @@ namespace VueCoreGraphQL.Repositories
             // Convert list to lookup object specifying the key
             return reviews.ToLookup(r => r.ProductId);
         }
+
+        public async Task<ProductReview> AddReview(ProductReview review)
+        {
+            _dbContext.ProductReviews.Add(review);
+            await _dbContext.SaveChangesAsync();
+            return review;
+        }
     }
 }

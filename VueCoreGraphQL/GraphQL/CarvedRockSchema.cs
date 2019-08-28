@@ -8,6 +8,7 @@ namespace VueCoreGraphQL.GraphQL
         public CarvedRockSchema(IDependencyResolver resolver) : base(resolver)
         {
             Query = resolver.Resolve<CarvedRockQuery>();    // Query => data retrieval
+            Mutation = resolver.Resolve<CarvedRockMutation>();  // Mutation => adding, updating, deleting data
         }
     }
 }

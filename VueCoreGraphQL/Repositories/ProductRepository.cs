@@ -24,5 +24,11 @@ namespace VueCoreGraphQL.Repositories
         {
             return await _dbContext.Products.SingleOrDefaultAsync(p => p.Id == id);
         }
+
+        public void Delete(Product product)
+        {
+            _dbContext.Products.Remove(product);
+            _dbContext.SaveChanges();
+        }
     }
 }
